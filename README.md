@@ -7,6 +7,8 @@ The package uses Eric Muller's shapefile of the TZ timezones of (available at ht
 ## Examples
 
 ```r
+library(timezone)
+
 # Los Angeles - 34.0522° N, 118.2428° W
 find_tz(-118.2428,34.0522)
 find_tz(-118.2428,34.0522, use_google=TRUE)
