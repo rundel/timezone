@@ -1,0 +1,11 @@
+Package: timezone
+Type: Package
+Title: Utility function for determing timezone based on location.
+Version: 0.1
+Date: 2013-01-24
+Author: Colin Rundel <rundel@gmail.com>
+Maintainer: Colin Rundel <rundel@gmail.com>
+Description: 
+License: LGPL
+Depends: proj4, sp, rgeos
+Suggests: lubridate, RCurl, RJSONIO
