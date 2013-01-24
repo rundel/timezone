@@ -17,5 +17,5 @@ find_tz(-118.2428,34.0522, use_google=TRUE)
 find_tz(cbind(-3.2200, 55.9500))
 
 # Istanbul - 41.0128° N, 28.9744° E
-find_tz(SpatialPoints(cbind(41.0128, 28.9744)))
+find_tz(SpatialPoints(cbind(28.9744,41.0128)))
 ```
