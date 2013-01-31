@@ -9,7 +9,7 @@ find_tz = function(x, y, p4s = "", use_google = FALSE)
     }
     else
     {
-        stopifnot(is.numeric(x))
+        x = as.matrix(x)
         if (!missing(y))
             coords = cbind(x,y)
         else
