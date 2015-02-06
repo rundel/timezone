@@ -40,14 +40,14 @@ find_tz = function(x, y, p4s = "", use_google = FALSE)
 
         if (any(apply(tz_index,2,sum) > 1))
         {
-            stop("Some coordinates reported multiple timezones - Indexes: ",  
+            stop("Some coordinates reported multiple timezones - Indexes: ",
                  paste(which(apply(tz_index,2,sum) > 1),collapse=", "))
         }
 
         tzs = apply(tz_index,2,function(x) {
-                if(sum(x) == 0) 
-                    NA 
-                else 
+                if(sum(x) == 0)
+                    NA
+                else
                     zone_ids[x]
             })
 
@@ -69,7 +69,7 @@ get_google_tz = function(coords)
 
     url = paste0("https://maps.googleapis.com/maps/api/timezone/json?location=",coords[2],",",coords[1], "&timestamp=0&sensor=false")
 
-    id = fromJSON(getURL(url))$timeZoneId 
+    id = fromJSON(getURL(url))$timeZoneId
 
     return( ifelse(is.null(id), NA, id) )
 }
